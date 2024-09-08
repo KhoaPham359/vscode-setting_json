@@ -1,0 +1,237 @@
+{
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+  "terminal.integrated.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.tabSize": 2,
+  "explorer.confirmDelete": false,
+  "C_Cpp.default.compilerPath": "C:\\msys64\\ucrt64\\bin\\g++.exe",
+
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "bash (MSYS2)": {
+      "path": "C:\\msys64\\usr\\bin\\bash.exe",
+      "args": ["--login", "-i"]
+    },
+    "Windows PowerShell": {
+      "path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+    }
+  },
+
+  "editor.fontLigatures": true,
+  "workbench.startupEditor": "none",
+  "prettier.bracketSameLine": true,
+  "C_Cpp.formatting": "clangFormat",
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+
+  // VIM CONFIGURATION
+  "vim.useSystemClipboard": true,
+  "vim.easymotion": true,
+  "vim.commandLineModeKeyBindings": [],
+  "vim.commandLineModeKeyBindingsNonRecursive": [],
+  "vim.insertModeKeyBindings": [
+    {
+      // go to normal mode
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    },
+    {
+      // go to next suggestion
+      "before": ["ctrl", "j"],
+      "commands": ["selectNextSuggestion"],
+      "silent": true
+    },
+    {
+      // go to previous suggestion
+      "before": ["ctrl", "k"],
+      "commands": ["selectPrevSuggestion"],
+      "silent": true
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      // indent in visual mode
+      "before": ["tab"],
+      "commands": ["tab"]
+    },
+    {
+      // outdent in visual mode
+      "before": ["shift+tab"],
+      "commands": ["outdent"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    {
+      // indent in normal mode
+      "before": ["tab"],
+      "commands": ["tab"]
+    },
+    {
+      // outdent in normal mode
+      "before": ["shift+tab"],
+      "commands": ["outdent"]
+    },
+    {
+      // save file
+      "before": ["space", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      // show command
+      // "before": [":"],
+      // "commands": ["workbench.action.showCommands"],
+      // "silent": true
+    },
+    {
+      // focus sidebar
+      "before": ["space", "o"],
+      "commands": ["workbench.action.focusSideBar"],
+      "silent": true
+    },
+    {
+      // toggle sidebar
+      "before": ["space", "e"],
+      "commands": ["workbench.action.toggleSidebarVisibility"],
+      "silent": true
+    },
+    {
+      // go to definiton
+      "before": ["g", "d"],
+      "commands": ["editor.action.revealDefinition"],
+      "silent": true
+    },
+    {
+      "before": ["g", "h"],
+      "commands": ["C_Cpp.CreateDeclarationOrDefinition"],
+      "silent": true
+    },
+    {
+      "before": ["g", "l"],
+      "commands": ["editor.action.marker.next"],
+      "silent": true
+    },
+    {
+      // close active tab
+      "before": ["space", "c"],
+      "commands": ["workbench.action.closeActiveEditor"],
+      "silent": true
+    },
+    {
+      // toggle comment
+      "before": ["space", "/"],
+      "commands": ["editor.action.commentLine"],
+      "silent": true
+    },
+    {
+      //  rename (variable, function,...)
+      "before": ["space", "l", "r"],
+      "commands": ["editor.action.rename"],
+      "silent": true
+    },
+    {
+      // toggle breakpoint
+      "before": ["space", "d", "b"],
+      "commands": ["editor.debug.action.toggleBreakpoint"],
+      "silent": true
+    },
+    {
+      // start debugging
+      "before": ["space", "d", "c"],
+      "commands": ["workbench.action.debug.start"],
+      "silent": true
+    }
+    
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      // insert line break
+      "before": ["K"],
+      "commands": ["lineBreakInsert"],
+      "silent": true
+    },
+    {
+      // append at the end of line
+      "before": ["space", "a"],
+      "after": ["A"],
+      "silent": true
+    },
+    {
+      // insert at the beginning of line
+      "before": ["space", "i"],
+      "after": ["I"],
+      "silent": true
+    },
+    {
+      // move current line to the middle of the screen
+      "before": ["space", "space"],
+      "after": ["z", "."],
+      "silent": true
+    },
+    {
+      // paste from the (non volatile) yank register "0, which won't be overwritten by the delete command dd
+      "before": ["space","p"],
+      "after": ["\"", "0", "p"],
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "after": ["p", "g", "v", "y"]
+    },
+    {
+      // toggle comment in visual mode
+      "before": ["space", "/"],
+      "commands": ["editor.action.commentLine"],
+      "silent": true
+    }
+  ],
+
+  // "editor.fontFamily": "OperatorMono Nerd Font",
+  // "editor.fontFamily": "iA Writer Duospace",
+  "editor.fontSize": 18,
+  "editor.fontWeight": "300",
+  "editor.cursorBlinking": "solid",
+  "workbench.tree.indent": 16,
+  "editor.lineNumbers": "relative",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "cmake.showOptionsMovedNotification": false,
+  "window.zoomLevel": -1,
+  "indentRainbow.colors": [
+    "rgba(3, 4, 94,0.15)",
+    "rgba(2, 62, 138,0.15)",
+    "rgba(0, 119, 182, 0.15)",
+    "rgba(0, 150, 199,0.15)",
+    "rgba(0, 180, 216,0.15)",
+    "rgba(72, 202, 228,0.15)",
+    "rgba(144, 224, 239,0.15)",
+    "rgba(144, 224, 239,0.1)",
+    "rgba(144, 224, 239,0.05)",
+    "rgba(144, 224, 239,0.025)"
+  ],
+  "indentRainbow.excludedLanguages": [
+    
+    "plaintext"
+  ],
+  "git.openRepositoryInParentFolders": "never",
+  "makefile.makefilePath": "Makefile",
+  "cmake.configureOnOpen": true,
+  "security.workspace.trust.untrustedFiles": "open",
+}
