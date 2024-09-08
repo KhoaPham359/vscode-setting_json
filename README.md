@@ -23,7 +23,7 @@ VSCode is configured to work with C++ using `gcc` and `clangFormat`:
 
 ### Vim Keybindings
 Enhanced Vim keybindings are set up for navigation, editing, and command execution:
-- **Insert Mode**: Quick exit from insert mode using `jk`, and suggestions navigation using `Ctrl+j/k`.
+- **Insert Mode**: Quick exit from insert mode using `jk`
 - **Normal Mode**: Custom keybindings for common actions:
   - `Space + w`: Save file.
   - `Space + o`: Focus sidebar.
@@ -49,9 +49,3 @@ Enhanced Vim keybindings are set up for navigation, editing, and command executi
 ### Miscellaneous
 - **Makefile and CMake**: Makefile and CMake settings are specified for project automation.
 - **Workspace Trust**: The workspace is configured to automatically open untrusted files without confirmation (`"security.workspace.trust.untrustedFiles": "open"`).
-
-## How to Use This Repository
-
-1. Clone this repository to your local machine:
-   ```bash
-   git clone https://github.com/yourusername/vscode-settings.git
